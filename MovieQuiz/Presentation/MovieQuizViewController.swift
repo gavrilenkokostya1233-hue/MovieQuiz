@@ -3,6 +3,8 @@ import UIKit
 final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     
     // MARK: - Outlets (Элементы экрана)
+    @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var noButton: UIButton!
     @IBOutlet private weak var counterLabel: UILabel! 
     @IBOutlet private weak var textLabel: UILabel!    
     @IBOutlet private weak var imageView: UIImageView! 
@@ -32,6 +34,10 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         let alertPresenter = AlertPresenter()
         alertPresenter.viewController = self
         self.alertPresenter = alertPresenter
+        
+        yesButton.layer.cornerRadius = 15
+        noButton.layer.cornerRadius = 15
+        
     }
     
     // MARK: - QuestionFactoryDelegate (Ловим ответы от Фабрики)
