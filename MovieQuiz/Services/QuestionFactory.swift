@@ -84,10 +84,10 @@ class QuestionFactory: QuestionFactoryProtocol {
             
             
             let ratingThreshold = Int.random(in: 6...9) 
-            let text = "Рейтинг этого фильма больше, чем \(ratingThreshold)?"
+            let text1 = "Рейтинг этого фильма больше, чем \(ratingThreshold)?"
             let correctAnswer = Int(movie.rating) ?? 0 > ratingThreshold
             let question = QuizQuestion(image: imageData,
-                                        text: text,
+                                        text: text1,
                                         correctAnswer: correctAnswer)
             
             DispatchQueue.main.async { [weak self] in
